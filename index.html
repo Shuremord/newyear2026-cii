@@ -8,79 +8,33 @@
       margin: 0;
       height: 100vh;
       background: #0b0b10;
-      color: #f5f5f5;
       display: flex;
       justify-content: center;
       align-items: center;
       font-family: "Microsoft YaHei", sans-serif;
+      color: #f5f5f5;
     }
-    #screen {
-      max-width: 720px;
-      padding: 32px;
-      font-size: 20px;
-      line-height: 1.9;
-      white-space: pre-line;
-      letter-spacing: 0.05em;
-    }
-    .cursor {
-      display: inline-block;
-      width: 10px;
-      background: #f5f5f5;
-      margin-left: 4px;
-      animation: blink 1s infinite;
-    }
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      51%, 100% { opacity: 0; }
+    h1 {
+      text-align: center;
     }
   </style>
 </head>
 <body>
+  <h1>🎆 欢迎来到 CII 新年祝福页面 🎆</h1>
 
-<div id="screen">
-  <span id="text"></span><span class="cursor"></span>
-</div>
+  <script>
+    // 第一条祝福
+    alert("新年快乐！\n感谢你在过去一年里的陪伴。\nCII 正在准备新一年的讯号……");
 
-<script>
-  const lines = [
-    "新年快乐。",
-    "",
-    "感谢你在这一年里的陪伴。",
-    "",
-    "CII 正在准备新一年的讯号……",
-    "",
-    "……",
-    "",
-    "你是不是盯着看了很久？",
-    "哈哈哈！谢谢咯！",
-    "再次感谢您的陪伴，CII励志为您展现更多更美好的故事。",
-    "",
-    "🎆 新年快乐。",
-    "——友情提示：",
-    "新的一年，也要记得不要随便点击陌生链接哦。"
-  ];
+    // 第二条提示
+    setTimeout(() => {
+      alert("……你是不是盯着看了很久？\n再次感谢您的陪伴，CII 励志为您展现更多更美好的故事。");
+    }, 500);
 
-  const textEl = document.getElementById("text");
-  let lineIndex = 0;
-  let charIndex = 0;
-
-  function typeLine() {
-    if (lineIndex >= lines.length) return;
-
-    if (charIndex < lines[lineIndex].length) {
-      textEl.textContent += lines[lineIndex][charIndex];
-      charIndex++;
-      setTimeout(typeLine, 80); // 每个字符间隔 80ms
-    } else {
-      textEl.textContent += "\n";
-      lineIndex++;
-      charIndex = 0;
-      setTimeout(typeLine, 600); // 每行间隔 600ms
-    }
-  }
-
-  typeLine();
-</script>
-
+    // 第三条友情提示
+    setTimeout(() => {
+      alert("🎆 新年快乐。\n——友情提示：\n新的一年，也要记得不要随便点击陌生链接哦。");
+    }, 1000);
+  </script>
 </body>
 </html>
