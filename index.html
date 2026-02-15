@@ -52,7 +52,7 @@
     "……",
     "",
     "你是不是盯着看了很久？",
-    "",
+    "哈哈哈！谢谢咯！",
     "再次感谢您的陪伴，CII励志为您展现更多更美好的故事。",
     "",
     "🎆 新年快乐。"
@@ -70,12 +70,12 @@
     if (charIndex < lines[lineIndex].length) {
       textEl.textContent += lines[lineIndex][charIndex];
       charIndex++;
-      setTimeout(typeLine, 80);
+      setTimeout(typeLine, 80); // 每个字符间隔 80ms
     } else {
       textEl.textContent += "\n";
       lineIndex++;
       charIndex = 0;
-      setTimeout(typeLine, 600);
+      setTimeout(typeLine, 600); // 每行间隔 600ms
     }
   }
 
